@@ -434,11 +434,11 @@ def main(
     # Experimental parameters
     n_quality = ['best', 'good', 'worst'] # , 'good', 'worst'
     n_values = [100]  # Reduced from [10, 100, 1000]
-    n_seperablity = [0.0,  0.5, 1.0] # seperablity[0.0, 0.5, 1.0]
-    n_time_scale = [1,  5, 10] # time scale
-    n_dim_scale = [[0.23, 0.23]] # dimension scale
-    n_dim_length = [2] # dimension length
-    nu_values = [1.5]  # Reduced from [0.5, 1.5, 2.5]
+    n_seperablity = [0.0, 0.5, 0.9] # seperablity[0.0, 0.5, 1.0]
+    n_time_scale = [1, 5, 10] # time scale
+    n_dim_scale = [[0.05, 0.05, 0.05, 0.05, 5, 5, 5, 5, 5, 5]] # dimension scale
+    n_dim_length = [10] # dimension length
+    nu_values = [3.5]  # Reduced from [0.5, 1.5, 2.5]
     n_time_lag = [2] # time lag
     n_nu_time = [0.5] # time smoothness
     

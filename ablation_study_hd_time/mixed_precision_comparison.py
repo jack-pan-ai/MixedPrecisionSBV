@@ -581,6 +581,7 @@ def main(
         if potential_path.exists() and (potential_path / "data" / "mixed_precision_overall_results.json").exists():
             print(f"Found existing results at: {results_root}")
             timestamp = False  # Use existing directory structure
+    
     effective_root = Path(results_root).expanduser() if results_root else (DEFAULT_RESULTS_ROOT / 'mixed_precision_comparison')
     results_paths = prepare_results_dir(
         root=effective_root,
@@ -597,14 +598,14 @@ def main(
         print("Running new experiments...")
         
         # Experimental parameters (matching operation_llh_error_impact_analysis.py settings)
-        n_quality = ['best', 'good', 'worst']  # , 'good', 'worst'
+        n_quality = ['worst', 'good', 'best']  # , 'good', 'worst'
 
         n_values = [100]  # Reduced from [10, 100, 1000]
-        nu_values = [1.5]  # Reduced from [0.5, 1.5, 2.5]
+        nu_values = [3.5]  # Reduced from [0.5, 1.5, 2.5]
         separability_grid = [0.0, 0.5, 1.0]
-        time_scale_grid = [1,  5, 10]
-        dim_scale_grid = [[0.23, 0.23]]
-        dim_length_grid = [2]
+        time_scale_grid = [1, 5, 10]
+        dim_scale_grid = [[0.05, 0.05, 0.05, 0.05, 5, 5, 5, 5, 5, 5]]
+        dim_length_grid = [10]
         time_lag_grid = [2]
         nu_time_grid = [0.5]
 

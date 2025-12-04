@@ -33,3 +33,4 @@ simulations/fig/
 
 ablation_study_space_time/results/
 ablation_study_space_time/*.png
+ablation_study_hd_time/results

@@ -312,14 +312,13 @@ def main(results_root: Optional[str] = None, timestamp: bool = True, load_result
     # Experimental parameters (reduced for faster execution)
     n_quality = ['best', 'good', 'worst']  # best: the best approximation, good: the good approximation, worst: the worst approximation['best', 'good', 'worst']
     n_values = [100]  # Reduced from [10, 100, 1000]
-    n_seperablity = [0.0,  0.5, 1.0] # seperablity[0.0, 0.5, 1.0]
-    n_time_scale = [1,  5, 10] # time scale
-    n_dim_scale = [[0.23, 0.23]] # dimension scale
-    n_dim_length = [2] # dimension length
-    nu_values = [1.5]  # Reduced from [0.5, 1.5, 2.5]
+    n_seperablity = [0, 0.5, 1.0] # seperablity[0.0, 0.5, 1.0]
+    n_time_scale = [1, 5, 10] # time scale
+    n_dim_scale = [[0.05, 0.05, 0.05, 0.05, 5, 5, 5, 5, 5, 5]] # dimension scale
+    n_dim_length = [10] # dimension length
+    nu_values = [3.5]  # Reduced from [0.5, 1.5, 2.5]
     n_time_lag = [2] # time lag
     n_nu_time = [0.5] # time smoothness
-    
     n_trials = 10  # Reduced from 10
     
     all_results = []

@@ -12,6 +12,9 @@ import sys
 sys.path.append('/home/panq/Documents/MixedPrecisionSBV/ablation_study_space_time')
 from utils import generate_circle_points
 
+plt.rcParams.update({'font.size': 16})
+
+
 def visualize_spacetime_2d(n=15, n_points=300, time_lag=2, quality='best', seed=42):
     """
     Visualize the space-time point generation in 2D for easier understanding.
@@ -37,7 +40,7 @@ def visualize_spacetime_2d(n=15, n_points=300, time_lag=2, quality='best', seed=
     print(f"Limit: {limit}")
     
     # Create figure with subplots for each time step
-    fig, axes = plt.subplots(1, time_lag, figsize=(8*time_lag, 7))
+    fig, axes = plt.subplots(1, time_lag, figsize=(6*time_lag, 5))
     if time_lag == 1:
         axes = [axes]
     
@@ -88,7 +91,7 @@ def visualize_spacetime_2d(n=15, n_points=300, time_lag=2, quality='best', seed=
         ax.set_xlabel('x', fontsize=18)
         ax.set_ylabel('y', fontsize=18)
         ax.set_title(f'Time Step t={t}', fontsize=18, 
-        fontweight='bold'
+        # fontweight='bold'
         )
         ax.legend(loc='upper left', fontsize=16)
         ax.grid(True, alpha=0.3)
